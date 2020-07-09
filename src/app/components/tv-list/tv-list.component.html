@@ -1,0 +1,13 @@
+<div class="container-search">
+    <h5>Buscar Tv-Series:</h5>
+    <input type="text" (keyup)="getFilterTvList($event)" value="" id="search" placeholder="search">
+</div>
+<div class="tv-list">
+    <div class="tv" *ngFor="let tv of tvList">
+        <h5>{{(tv.name.length > 20)? (tv.name | uppercase | slice: 0:20)+'...':(tv.name | uppercase)   }}</h5>
+        <a href="http://image.tmdb.org/t/p/w185{{tv.poster_path}}" target="_blank">
+            <img src="http://image.tmdb.org/t/p/w185{{tv.poster_path}}" alt="imagen de {{tv.poster_path}}">
+        </a>
+        <!-- {{tv.first_air_date | date:'EEEE, MMMM d, y'}} -->
+    </div>
+</div>

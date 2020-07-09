@@ -1,0 +1,24 @@
+:host {
+    display: flex;
+    flex-direction: column;
+}
+
+.tv-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.tv {
+    max-width: 20%;
+    width: 20%;
+    > h5 {
+        font-size: medium;
+    }
+}
+
+.container-search {
+    text-align: center;
+    padding: 3%;
+}
